@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.menu {    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    transition: 0.2s;
+}
+.menu ul {
+    position: relative;
+    display: flex;
+    width: auto; 
+}
+.menu li {
+    list-style: none;
+    width: auto;
+    padding: 0px 10px;
+}
+.menu li a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    padding: 10px 10px;
+}
+
+/* burger */
+.burger {
+    display: none;
+}
+label {
+    cursor: pointer;
+}
+.burger-icon {
+    width: 30px;
+    scale: 1.5;
+    border: 0;
+    margin: 0px;
+}
+.burger-icon,
+.burger-icon::before,
+.burger-icon::after {
+    display: block;
+    border-radius: 2px;
+    height: 2.2px;
+    background: #282828;
+}
+.burger-icon::before,
+.burger-icon::after {
+    content: "";
+    position: absolute;
+    width: 60%;
+}
+.burger-icon::before {
+    top: -8px;
+    right: 0;
+}
+.burger-icon::after {
+    top: 8px;
+    left: 0;
+}
+.burger-icon::before,
+.burger-icon::after {
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+}
+.burger input {
+    position: absolute;
+    scale: 0;
+    margin: 0;
+    padding: 0;
+}
+.burger input:checked ~ .burger-icon {
+    background-color: transparent;
+}
+.burger input:checked ~ .burger-icon::before,
+.burger input:checked ~ .burger-icon::after {
+    width: 30px;
+}
+.burger input:checked ~ .burger-icon::before {
+    transform: rotate(-45deg);
+    top: 0px;
+}
+.burger input:checked ~ .burger-icon::after {
+    transform: rotate(45deg);
+    top: 0px;
+}
+@media (max-width: 821px) {
+    .burger {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: grid;
+        place-items: center;
+        width: 60px;
+        height: 60px;
+    }
+    .menu {
+        display: none;
+    }
+    body.open .menu {
+        display: flex;
+        height: 100vh;
+        backdrop-filter: blur(5px);
+    }
+    .menu ul {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+    .menu li {
+        padding: 1px 0px;
+    }
+    .menu li a {
+        padding: 20px;
+        justify-content: center;
+        font-size: 30px;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        
+    }
+}
