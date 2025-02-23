@@ -3,7 +3,6 @@ const toggleMenu = () => {
     document.body.classList.toggle("open");
 };
 
-
 // button show
 const btn = document.querySelector('.btn_to_top');
 const showButton = () => {
