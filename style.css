@@ -1,10 +1,11 @@
+* {
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
     padding: 0;
-    background-image: url("bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
 }
+
 /* header */
 header {
     width: 100%;
@@ -97,20 +98,38 @@ label {
     transform: rotate(45deg);
     top: 0px;
 }
+
 /* main content */
 .content {
     display: flex;
     height: 350px;
 }
+.one {
+    background-color: #22223B;
+}
+.two {
+    background-color: #4A4E69;
+}
+.three {
+    background-color: #9A8C98;
+}
+.four {
+    background-color: #C9ADA7;
+}
+.five {
+    background-color: #F2E9E4;
+}
+/* scroll to top button */
 .btn_to_top {
     padding: 0;
     margin: 0;
     position: fixed;
-    bottom: 30px;
-    right: 50px;
+    bottom: 2rem;
+    right: 3rem;
     background-color: white;
     border-radius: 100%;
     border: none;
+    display: none;
 }
 .btn_to_top svg {
     width: 40px;
@@ -124,6 +143,8 @@ label {
 .btn_to_top:hover {
     background-color: rgb(136, 161, 176);
 }
+
+/*  */
 @media (max-width: 821px) {
     .burger {
         display: block;
