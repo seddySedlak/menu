@@ -5,6 +5,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+/* header */
 header {
     width: 100%;
     display: flex;
@@ -95,6 +96,33 @@ label {
 .burger input:checked ~ .burger-icon::after {
     transform: rotate(45deg);
     top: 0px;
+}
+/* main content */
+.content {
+    display: flex;
+    height: 350px;
+}
+.btn_to_top {
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    background-color: white;
+    border-radius: 100%;
+    border: none;
+}
+.btn_to_top svg {
+    width: 40px;
+    margin: 0;
+    padding: 0;
+    fill: black;
+}
+.btn_to_top svg:hover {
+    cursor: pointer;
+}
+.btn_to_top:hover {
+    background-color: rgb(136, 161, 176);
 }
 @media (max-width: 821px) {
     .burger {
